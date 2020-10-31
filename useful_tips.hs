@@ -1,0 +1,1 @@
+--   To compile the program: stack exec -- runghc <program name>
