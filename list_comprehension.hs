@@ -1,5 +1,5 @@
 -- | Define functions
-
+import Prelude hiding (concat)
 -- list1 creates a list with values from 1 to n
 list1 :: Int -> [Int]
 list1 n = [x  | x <- [1..n]]
@@ -28,6 +28,10 @@ prime n = factors n == [1, n]
 primes :: Int -> [Int]
 primes n = [x | x <- [1..n], prime x]
 
+-- concat flats out inner lists into one list
+concat :: [[Int]] -> [Int]
+concat xss = [x | xs <- xss, x <- xs ]
+
 -- | main program starts
 main :: IO()
 main = do
@@ -41,8 +45,6 @@ putStrLn("\n factors 7 = " ++ show(factors 7))
 putStrLn("\n factors 15 = " ++ show(factors 15))
 putStrLn("\n prime 7 = " ++ show(prime 7))
 putStrLn("\n prime 15 = " ++ show(prime 15))
-
 putStrLn("\n primes 40 = " ++ show(primes 40))
-
-
+putStrLn("\n concat' [[1, 2, 3], [4, 5], [6]] = " ++ show(concat [[1, 2, 3], [4, 5], [6]] ))
 putStrLn("**********************************")
