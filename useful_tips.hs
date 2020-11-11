@@ -6,3 +6,10 @@ stack exec -- runghc <program name>
 -- | main program starts
 main :: IO()
 main = do
+
+putStrLn("**********************************")
+
+putStrLn("\n # <text> = " ++ show( <functions> ))
+
+
+putStrLn("**********************************")
