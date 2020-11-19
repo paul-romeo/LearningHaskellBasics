@@ -47,6 +47,10 @@ qsort (x:xs) = qsort smallers ++ [x] ++ biggers
   where smallers = [a | a <- xs, a <= x ]
         biggers = [b | b <- xs, b > x]
 
+addToList :: [Int] -> [Int]
+addToList [] = []
+addToList xs = [x | x <- xs]
+
 
 -- | main program starts
 main :: IO()
@@ -57,14 +61,18 @@ putStrLn("**********************************")
 putStrLn("\n # factorial 5 = " ++ show( factorial 120 ))
 putStrLn("\n # product [1, 2, 3, 4] = " ++ show( product [1, 2, 3, 4] ))
 putStrLn("\n # length \"abcde\" = " ++ show( length "abcde" ))
-putStrLn("\n # length \"\" = " ++ show( length "" ))
 putStrLn("\n # length [] = " ++ show( length [] ))
 putStrLn("\n # length [1, 2, 4] = " ++ show( length [1, 2, 4] ))
 putStrLn("\n # reverse \"abcde\" = " ++ show( reverse "abcde" ))
+putStrLn("\n # reverse \"\" = " ++ show( reverse "" ))
 putStrLn("\n # reverse [5, 4, 3, 2, 1] = " ++ show( reverse [5, 4, 3, 2, 1] ))
 putStrLn("\n # zip ['a', 'b', 'c'] [4, 5, 6] = " ++ show( zip ['a', 'b', 'c'] [4, 5, 6] ))
 putStrLn("\n # drop 2 [1, 2, 3, 4] = " ++ show( drop 2 [1, 2, 3, 4]  ))
 putStrLn("\n # [1, 2, 3] ++ [4, 5, 6] = " ++ show( [1, 2, 3] ++ [4, 5, 6] ))
 putStrLn("\n # qsort [3, 2, 4, 1, 5] = " ++ show( qsort [3, 2, 4, 1, 5] ))
+putStrLn("\n # qsort [] = " ++ show( qsort [] ))
+putStrLn("\n # addToList [] = " ++ show( addToList [] ))
+
+
 
 putStrLn("**********************************")

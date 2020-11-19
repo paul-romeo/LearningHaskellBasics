@@ -1,0 +1,7 @@
+-- | function func_name
+--   - returns:
+--     -
+--   - parameters:
+--     -
+-- >
+--  func_name parameters => returned_values
